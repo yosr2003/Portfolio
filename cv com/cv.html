@@ -1,58 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="cv.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="cv.css">
 </head>
+
 <body>
-<script>
+  <script>
 
-function ajouterCase() {
-  const table = document.getElementById('myTable');
-  const inputNom = document.getElementById('inputNom');
-  const inputAge = document.getElementById('inputAge');
-  const inputVille = document.getElementById('inputVille');
+    function ajouterCase() {
+      const table = document.getElementById('myTable');
+      const inputNom = document.getElementById('inputNom');
+      const inputAge = document.getElementById('inputAge');
+      const inputVille = document.getElementById('inputVille');
 
-  // Créer une nouvelle rangée (<tr>)
-  const newRow = document.createElement('tr');
+      // Créer une nouvelle rangée (<tr>)
+      const newRow = document.createElement('tr');
 
-  // Créer les cellules (<td>) avec les valeurs saisies
-  const nomCell = document.createElement('td');
-  nomCell.textContent = inputNom.value;
+      // Créer les cellules (<td>) avec les valeurs saisies
+      const nomCell = document.createElement('td');
+      nomCell.textContent = inputNom.value;
 
-  const ageCell = document.createElement('td');
-  ageCell.textContent = inputAge.value;
+      const ageCell = document.createElement('td');
+      ageCell.textContent = inputAge.value;
 
-  const villeCell = document.createElement('td');
-  villeCell.textContent = inputVille.value;
+      const villeCell = document.createElement('td');
+      villeCell.textContent = inputVille.value;
 
-  // Ajouter les cellules à la rangée
-  newRow.appendChild(nomCell);
-  newRow.appendChild(ageCell);
-  newRow.appendChild(villeCell);
+      // Ajouter les cellules à la rangée
+      newRow.appendChild(nomCell);
+      newRow.appendChild(ageCell);
+      newRow.appendChild(villeCell);
 
-  // Insérer la nouvelle rangée avant la première rangée existante
-  const firstRow = table.querySelector('tbody tr');
-  table.querySelector('tbody').insertBefore(newRow, firstRow);
+      // Insérer la nouvelle rangée avant la première rangée existante
+      const firstRow = table.querySelector('tbody tr');
+      table.querySelector('tbody').insertBefore(newRow, firstRow);
 
-  // Effacer les valeurs saisies dans les inputs
-  inputNom.value = '';
-  inputAge.value = '';
-  inputVille.value = '';
-}
-
-
+      // Effacer les valeurs saisies dans les inputs
+      inputNom.value = '';
+      inputAge.value = '';
+      inputVille.value = '';
+    }
 
 
-function addEducationOptions() {
+
+
+    function addEducationOptions() {
       var educationInput1 = document.getElementById("educationInput1").value;
       var educationInput2 = document.getElementById("educationInput2").value;
-      
+
       var educationList = document.getElementsByClassName("edu education")[0].getElementsByTagName("ul")[0];
-      
+
       var option1 = document.createElement("li");
       option1.textContent = educationInput1;
       educationList.appendChild(option1);
@@ -64,160 +66,170 @@ function addEducationOptions() {
       document.getElementById("educationInput1").value = "";
       document.getElementById("educationInput2").value = "";
 
-   
-    
- 
+
+
+
     }
-    
+
     function addLanguageOption() {
       var languageInput = document.getElementById("languageInput").value;
-     
+
       var languageList = document.getElementsByClassName("edu")[1].getElementsByTagName("ul")[0];
-      
+
       var option = document.createElement("li");
       option.textContent = languageInput;
-      languageList.appendChild(option); 
- 
+      languageList.appendChild(option);
+
       document.getElementById("languageInput").value = "";
-}
+    }
 
-function DownCV(){
-  
-  let x=document.getElementById('addf');
-  let x2=document.getElementById('languageButton');
-  x.style.visibility='hidden';
-  x2.style.visibility='hidden';
-  window.print();
-  x.style.visibility='visible'; 
-  x2.style.visibility='visible';
+    function DownCV() {
 
-}
- function rangee(){
-  var rr=document.getElementById('rang');
-  var rrr=document.getElementById('a').value;
-  var rrr0=`<li"><span>${rrr}<input type="range" min="0" max="100" value="0" id="progressInput" style=" position:relative ;left: 0.7%;" ></span></li><br>`;
-  rr.insertAdjacentHTML('afterbegin',rrr0);
- }
+      let x = document.getElementById('addf');
+      let x2 = document.getElementById('languageButton');
+      x.style.visibility = 'hidden';
+      x2.style.visibility = 'hidden';
+      window.print();
+      x.style.visibility = 'visible';
+      x2.style.visibility = 'visible';
 
-</script>
+    }
+    function rangee() {
+      var rr = document.getElementById('rang');
+      var rrr = document.getElementById('a').value;
+      var rrr0 = `<li"><span>${rrr}<input type="range" min="0" max="100" value="0" id="progressInput" style=" position:relative ;left: 0.7%;" ></span></li><br>`;
+      rr.insertAdjacentHTML('afterbegin', rrr0);
+    }
 
-
+  </script>
 
 
-    <div class="f1" ><span style="color: rgb(246, 246, 246); "></span>
-     
-    
+
+
+  <div class="f1"><span style="color: rgb(246, 246, 246); "></span>
+
+
     <div class="f2">.</div>
     <div class="f3">.
-        <img src="pic.png" alt="" style="border: white solid 3px; border-radius: 50%; width: 220px; height: 220px;">
+      <img src="pic.png" alt="" style="border: white solid 3px; border-radius: 50%; width: 220px; height: 220px;">
     </div>
     <div class="f4">YOSR <br> AMAMOU</div>
     <div class="f5">Student</div>
-    <div class="f6"> <span style="font-weight: bold;"> PROFILE</span>  <br> <br>
-        I'm a beginner web  developer<br> interested in  building  modern <br> and  responsive websites and<br> web applications. <br>
-        I'm passionate about creating <br>  intuitive and  user-friendly <br>  interfaces that make it  easy <br> for  users to  achieve their goals.</div>
-        <img src="contact.png" alt="" style="width:200px; position: relative; left: 330px; top: 250px;">
-       <div class="img"> <img src="hobbies.png" alt="" style="width:250px;  position: relative; left: 310px; top: 280px;" ></div> 
+    <div class="f6"> <span style="font-weight: bold;"> PROFILE</span> <br> <br>
+      I'm a beginner web developer<br> interested in building modern <br> and responsive websites and<br> web
+      applications. <br>
+      I'm passionate about creating <br> intuitive and user-friendly <br> interfaces that make it easy <br> for users to
+      achieve their goals.</div>
+    <img src="contact.png" alt="" style="width:200px; position: relative; left: 330px; top: 250px;">
+    <div class="img"> <img src="hobbies.png" alt="" style="width:250px;  position: relative; left: 310px; top: 280px;">
+    </div>
 
-       <div class="liste">
-        <ul>
-          
-          <li class="edu education">EDUCATION
-            <ul><br>
-              <li>Iset CHARGUIA UNIVERSITY 
-                <ul>
-                  <li>Programming & coding career, in progress</li>
-                </ul>
-              </li>
-              <li>AOUINA COLLEGE
-                <ul>
-                  <li>2018-2022</li>
-                </ul>
-              </li>
-            </ul>
-              <div style="position: relative; right:1%;">
-                <input type="text" placeholder="Ajouter une option"  id="educationInput1"/>
-                <input type="text" placeholder="Ajouter une description"  id="educationInput2"/>
-          
-                <button  onclick="addEducationOptions()" id="addf">Add </button>
-               </div>
-         
-            <br>
-          </li>
-          <li class="edu" >LANGUAGE
-            <ul><br>
-              <li>Fluent English</li>
-              <li>Spanish</li>
-              <li>Native Arabic</li>
-              <li>Fluent French</li>
-               </ul>
-                <input type="text" placeholder="Ajouter une option" id="languageInput" />
-                <button  id="languageButton"  onclick="addLanguageOption()" >Add new option</button>
-          </li>
-          <br>
-          <li class="edu">COMPUTERSkills
-            <div class="rang" >
-              <ul id="rang">
-                <il><span> JavaScript<input type="range" min="0" max="100" value="0" id="progressInput" style=" position:relative ;left: 2.2%;"></span></il><br>
-                <il><span>Java<input type="range" min="0" max="100" value="0" id="progressInput" style=" position:relative ;left: 4.8%;"></span></il><br>
-                <il><span>Prog C<input type="range" min="0" max="100" value="0" id="progressInput"  style=" position:relative ;left: 3.7%;"></span></il><br>
-                <il><span>Linux<input type="range" min="0" max="100" value="0" id="progressInput" style=" position:relative ;left: 4.2%;"></span></il><br>
-                <il><span>HTML & css <input type="range" min="0" max="100" value="0" id="progressInput" style=" position:relative ;left: 0.7%;" ></span></il><br>
+    <div class="liste">
+      <ul>
+
+        <li class="edu education">EDUCATION
+          <ul><br>
+            <li>Iset CHARGUIA UNIVERSITY
+              <ul>
+                <li>Programming & coding career, in progress</li>
               </ul>
-            <input type="text" placeholder="Ajouter une description"  id="a"/>
-            <button  onclick="rangee()" id="addf">Add </button>
-            </div> 
-          </li>
-          <li>
-            <li class="edu">DIPLOMAS 
-            <br>  <br>  <div id="tab">
-                <table id="myTable">
-                  <thead>
-                    <tr>
-                      <th>DIPLOMA</th>
-                      <th>YEAR</th>
-                      <th>EDUCATION</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Baccalaureate</td>
-                      <td>2022</td>
-                      <td>AOUINA HIGH SCHOOL</td>
-                    </tr>
-                    <tr>
-                      <td>9th year</td>
-                      <td>2018</td>
-                      <td>AOUINA COLLEGE</td>
-                    </tr>
-                    <tr>
-                      <td>.....</td>
-                      <td>.....</td>
-                      <td>.....</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <br> 
-                <input type="text" id="inputNom" placeholder="Diploma" style="width: 100px;">
-              <input type="text" id="inputAge" placeholder="year" style="width: 100px;">
-              <input type="text" id="inputVille" placeholder="education" style="width: 100px;">
-              <button onclick="ajouterCase()" style="width: 60px; height: 30px;" id="addf">Add</button><br>
-              <button onclick="DownCV()" style="width: 80px; height: 30px;">Download</button>
+            </li>
+            <li>AOUINA COLLEGE
+              <ul>
+                <li>2018-2022</li>
+              </ul>
+            </li>
+          </ul>
+          <div style="position: relative; right:1%;">
+            <input type="text" placeholder="Ajouter une option" id="educationInput1" />
+            <input type="text" placeholder="Ajouter une description" id="educationInput2" />
+
+            <button onclick="addEducationOptions()" id="addf">Add </button>
+          </div>
+
+          <br>
+        </li>
+        <li class="edu">LANGUAGE
+          <ul><br>
+            <li>Fluent English</li>
+            <li>Spanish</li>
+            <li>Native Arabic</li>
+            <li>Fluent French</li>
+          </ul>
+          <input type="text" placeholder="Ajouter une option" id="languageInput" />
+          <button id="languageButton" onclick="addLanguageOption()">Add new option</button>
+        </li>
+        <br>
+        <li class="edu">COMPUTERSkills
+          <div class="rang">
+            <ul id="rang">
+              <il><span> JavaScript<input type="range" min="0" max="100" value="0" id="progressInput"
+                    style=" position:relative ;left: 2.2%;"></span></il><br>
+              <il><span>Java<input type="range" min="0" max="100" value="0" id="progressInput"
+                    style=" position:relative ;left: 4.8%;"></span></il><br>
+              <il><span>Prog C<input type="range" min="0" max="100" value="0" id="progressInput"
+                    style=" position:relative ;left: 3.7%;"></span></il><br>
+              <il><span>Linux<input type="range" min="0" max="100" value="0" id="progressInput"
+                    style=" position:relative ;left: 4.2%;"></span></il><br>
+              <il><span>HTML & css <input type="range" min="0" max="100" value="0" id="progressInput"
+                    style=" position:relative ;left: 0.7%;"></span></il><br>
+            </ul>
+            <input type="text" placeholder="Ajouter une description" id="a" />
+            <button onclick="rangee()" id="addf">Add </button>
+          </div>
+        </li>
+        <li>
+        <li class="edu">DIPLOMAS
+          <br> <br>
+          <div id="tab">
+            <table id="myTable">
+              <thead>
+                <tr>
+                  <th>DIPLOMA</th>
+                  <th>YEAR</th>
+                  <th>EDUCATION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Baccalaureate</td>
+                  <td>2022</td>
+                  <td>AOUINA HIGH SCHOOL</td>
+                </tr>
+                <tr>
+                  <td>9th year</td>
+                  <td>2018</td>
+                  <td>AOUINA COLLEGE</td>
+                </tr>
+                <tr>
+                  <td>.....</td>
+                  <td>.....</td>
+                  <td>.....</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <input type="text" id="inputNom" placeholder="Diploma" style="width: 100px;">
+            <input type="text" id="inputAge" placeholder="year" style="width: 100px;">
+            <input type="text" id="inputVille" placeholder="education" style="width: 100px;">
+            <button onclick="ajouterCase()" style="width: 60px; height: 30px;" id="addf">Add</button><br>
+            <button onclick="DownCV()" style="width: 80px; height: 30px;">Download</button>
 
 
 
-          </li>
+        </li>
 
 
 
-        </ul>
+      </ul>
 
-       </div>
-     
-   
-     
+    </div>
+    </div>
 
 
-       
+
+
+
 </body>
+
 </html>
