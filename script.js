@@ -94,6 +94,7 @@ async function populateOptions(searchType) {
         if (searchType === 'episode') {
             // Sort episodes by season and episode number
             const sortedEpisodes = allData.sort((a, b) => {
+                
                 const [aSeason, aEpisode] = a.episode.split('E');
                 const [bSeason, bEpisode] = b.episode.split('E');
                 if (aSeason !== bSeason) {
