@@ -1,0 +1,146 @@
+.f1{
+    background-color: rgb(255, 255, 255);
+    width: 800px;
+    height: 900px;
+    position: absolute;
+    left: 250px;
+    z-index: -1;
+}
+.f2{
+    background-color: #ebc9bb;
+    width: 800px;
+    height: 200px;
+    position: absolute;
+    left: 250px;
+    top: 40px;
+}
+.f3{
+    background-color: #6b9999;
+    width: 280px;
+    height: 1200px;
+    position: absolute;
+    left: 300px;
+
+   
+}
+.f3 img{
+margin-left: 20px;
+margin-top: 25px;
+}
+.f4{
+    font-weight: bold;
+    position: relative;
+    left: 600px;
+    top: 110px;
+    font-size: 29px;
+
+}
+.f5{
+    
+    position: relative;
+    left: 600px;
+    top: 130px;
+    font-size: 18px;
+    font-weight: lighter;
+font-style: italic;
+}
+.f6{
+    
+    position: relative;
+    left: 340px;
+    top: 230px;
+    font-size: 16px;
+    font-weight: lighter;
+color: white;
+}
+.ski{
+position: relative;
+left: 1000px;
+bottom: 320px;
+} 
+
+ul .edu {
+  list-style-image: url(rsz_fleche2.png);
+
+}
+.edu ul li {
+  list-style-image: none;
+}
+
+table {
+    width: 45%;
+    border-collapse: collapse;
+  
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  thead {
+    background-color: #ebc9bb;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #6b9999;
+  }
+
+.tab{
+    position: relative; 
+    bottom: 20%;
+    left:40%;
+    
+}
+
+
+button {
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+   }
+   
+   button::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #d57cce 0%, #97d2cd 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   button:hover::before {
+    width: 9em;
+   }
+
+.prog{
+  position: relative;
+  left: 20%;
+}
+   .inputt{
+    position:  absolute;
+    left: 43%;
+    bottom: 34.5%; 
+   }
+
+   .liste{
+    position: relative;
+    bottom: 35%;
+    left: 78%;
+   }
+
+
