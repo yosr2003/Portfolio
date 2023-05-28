@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Html And Css Crash Course</title>
+    <title>My Portfolio</title>
     <link href='https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,9 +22,9 @@
                 <ul class="nav_list">
                     <li class="nav_item"><a href="#home" class="nav_link active">Home</a></li>
                     <li class="nav_item"><a href="#about" class="nav_link">About</a></li>
-                    <li class="nav_item"><a href="#skills" class="nav_link">Skillls</a></li>
-                    <li class="nav_item"><a href="#work" class="nav_link">Work</a></li>
-                    <li class="nav_item"><a href="#contact" class="nav_link">Contact</a></li>
+                    <li class="nav_item"><a href="#skills" class="nav_link">Skills</a></li>
+                    <li class="nav_item"><a href="#work" class="nav_link">Diplomas</a></li>
+                    <li class="nav_item"><a href="#rick-morty-search" class="nav_link">MyApi</a></li>
                 </ul>
             </div>
 
@@ -37,13 +37,13 @@
         <!--==================== Home ===================-->
         <section class="home bg-grid" id="home">
             <div class="home_data">
-                <h1 class="home_title">Welcome<br>I'am <span class="home_title-color">yosr</span><br> beginner Web Developer</h1>
+                <h1 class="home_title">Welcome<br>I'm <span class="home_title-color">yosr</span><br> beginner Web Developer</h1>
                 <a href="cv com/cv.html" class="button">about me</a>
             </div>
             <div class="home_social">
-                <a href="#" class="home_social-icon"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://www.linkedin.com/?original_referer=https%3A%2F%2Fwww.bing.com%2F" class="home_social-icon"><i class="bx bxl-linkedin"></i></a>
                 <a href="https://www.instagram.com/" class="home_social-icon"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="home_social-icon"><i class="bx bxl-github"></i></a>
+                <a href="https://github.com/" class="home_social-icon"><i class="bx bxl-github"></i></a>
             </div>
             <div class="home_img">
                 <img src="pic-removebg-preview.png" alt="">
@@ -138,19 +138,23 @@
             </div>
         </section>
 
-        <!--============= CONTACT ===============-->
-        <section class="contact section" id="contact">
-            <h2 class="section_title">Contact me</h2>
+    <!--============ Rick and Morty API Search =============-->
+    <section class="work section" id="rick-morty-search">
+        <h2 class="section_title">Rick and Morty API Search</h2>
 
-            <div class="contact_container bg-grid">
-                <form action="" class="contact_form">
-                    <input type="text" placeholder="Name" class="contact_input">
-                    <input type="email" placeholder="Email" class="contact_input">
-                    <textarea name="" id="" cols="30" rows="10" class="contact_input"></textarea>
-                    <input type="button" value="Submit" class="contact_button button">
-                </form>
-            </div>
-        </section>
+        <div class="rick-morty-container">
+            <label class="rick-morty-label">Search by:</label>
+            <select id="rick-morty-searchType" class="rick-morty-select">
+                <option value="character">Character</option>
+                <option value="episode">Episode</option>
+                <option value="location">Location</option>
+            </select>
+            <label class="rick-morty-label">Choose:</label>
+            <select id="rick-morty-searchOptions" class="rick-morty-select"></select>
+            <button onclick="rickMortySearch()" class="rick-morty-button">Search</button>
+            <div class="rick-morty-result" id="rick-morty-searchResult"></div>
+        </div>
+    </section>
 
         <!--================ Footer ================-->
         <footer class="footer">
@@ -160,7 +164,7 @@
                 <a href="https://www.instagram.com/" class="footer_icon"><i class="bx bxl-instagram"></i></a>
                 <a href="#" class="footer_icon"><i class="bx bxl-twitter"></i></a>
             </div>
-            <p>&copy;copyright all rights reserved</p>
+    
         </footer>
         
     </main>
